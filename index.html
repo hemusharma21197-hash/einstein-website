@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albert Einstein — Personal Page</title>
+<meta name="description" content="Personal website of Albert Einstein — biography, published papers, hobbies, photos, and writing.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="brand">A. Einstein</span>
+    <button type="button" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav aria-label="Primary">
+      <ul id="mainNavLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#papers">Papers</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <figure class="hero-photo">
+        <img src="images/einstein.jpg" alt="Albert Einstein sticking out his tongue" width="440" height="440" onerror="this.onerror=null;this.src='images/portrait-placeholder.png';">
+      </figure>
+      <div class="hero-copy">
+        <p class="eyebrow">Welcome</p>
+        <h1>Albert Einstein</h1>
+        <p class="tagline">Theoretical Physicist &middot; Nobel Laureate</p>
+        <p>I'm best known for developing the theory of relativity, starting with a handful of papers written in 1905 and arriving at general relativity a decade later. This page collects my published work, a little about who I am outside of physics, and some photos along the way.</p>
+        <p class="btn-row">
+          <a href="#papers" class="btn btn-primary">View Papers</a>
+          <a href="#about" class="btn btn-outline">About Me</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="wrap">
+      <p class="eyebrow">Who I Am</p>
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <p>I was born in Ulm, in the German Empire, in 1879. I trained as a physicist and mathematician, and spent several early years working at the Swiss Patent Office in Bern, which is where most of my 1905 papers were written in my spare time. In 1915 I completed the general theory of relativity, describing gravity as the curvature of space and time rather than a simple force. In 1921 I was awarded the Nobel Prize in Physics for my explanation of the photoelectric effect.</p>
+        <p>Outside of research, I've always believed that imagination is as important as knowledge, and that curiosity has its own reason for existing. I split my time between physics, music, and thinking through problems on long walks.</p>
+      </div>
+      <p class="source-note">Summary adapted from Wikipedia.</p>
+    </div>
+  </section>
+
+  <!-- PAPERS -->
+  <section id="papers" class="section papers">
+    <div class="wrap">
+      <p class="eyebrow">Published Work</p>
+      <h2>Papers</h2>
+      <p class="section-intro">A growing collection of my published papers, starting with four written in a single remarkable year. New entries can be added to this list at any time without changing the layout.</p>
+
+      <h3 class="group-heading">1905 — The Miracle Year</h3>
+      <div class="paper-grid">
+
+        <article class="paper-card">
+          <span class="badge badge-year">1905</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>On the Electrodynamics of Moving Bodies</h4>
+          <p class="meta">Annalen der Physik</p>
+          <p class="abstract" hidden>Introduces the special theory of relativity, showing how measurements of space and time depend on the observer's motion.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+
+        <article class="paper-card">
+          <span class="badge badge-year">1905</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>Does the Inertia of a Body Depend Upon Its Energy Content?</h4>
+          <p class="meta">Annalen der Physik</p>
+          <p class="abstract" hidden>A short follow-up paper that leads to the relationship between mass and energy, E = mc&sup2;.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+
+        <article class="paper-card">
+          <span class="badge badge-year">1905</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>On a Heuristic Viewpoint Concerning the Production and Transformation of Light</h4>
+          <p class="meta">Annalen der Physik</p>
+          <p class="abstract" hidden>Proposes that light can behave as discrete packets of energy, work that later earned the Nobel Prize in Physics.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+
+        <article class="paper-card">
+          <span class="badge badge-year">1905</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>On the Motion of Small Particles Suspended in a Stationary Liquid</h4>
+          <p class="meta">Annalen der Physik</p>
+          <p class="abstract" hidden>Explains Brownian motion as a result of molecules colliding with small particles, offering strong evidence for atomic theory.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+
+      </div>
+
+      <h3 class="group-heading">1915 — Main Work</h3>
+      <div class="paper-grid single">
+        <article class="paper-card featured">
+          <span class="badge badge-featured">Most significant work</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>The Field Equations of Gravitation</h4>
+          <p class="meta">Prussian Academy of Sciences &middot; 1915</p>
+          <p class="abstract" hidden>Presents the general theory of relativity, describing gravity as the curvature of space and time. This is the work I am most widely known for.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+      </div>
+
+      <h3 class="group-heading">Later Work</h3>
+      <div class="paper-grid">
+        <article class="paper-card">
+          <span class="badge badge-year">1916</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>Relativity: The Special and General Theory</h4>
+          <p class="meta">Popular science book</p>
+          <p class="abstract" hidden>A plain-language explanation of relativity for readers without a background in physics, still in print today.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+        <article class="paper-card">
+          <span class="badge badge-year">1935</span>
+          <img src="images/paper-icon.png" alt="" class="paper-icon">
+          <h4>Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?</h4>
+          <p class="meta">Physical Review &middot; with B. Podolsky and N. Rosen</p>
+          <p class="abstract" hidden>Known as the EPR paper, it raises foundational questions about quantum entanglement that are still studied today.</p>
+          <button type="button" class="toggle-btn" aria-expanded="false">Read more</button>
+        </article>
+      </div>
+      <p class="source-note">New papers like these can be added here any time &mdash; the grid just keeps reflowing itself.</p>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards" class="section awards">
+    <div class="wrap">
+      <p class="eyebrow">Recognition</p>
+      <h2>Awards &amp; Honors</h2>
+      <ul class="awards-list">
+        <li><span class="award-year">1921</span><span class="award-name">Nobel Prize in Physics</span></li>
+        <li><span class="award-year">1925</span><span class="award-name">Copley Medal, Royal Society</span></li>
+        <li><span class="award-year">1929</span><span class="award-name">Max Planck Medal</span></li>
+        <li><span class="award-year">1999</span><span class="award-name">Time Person of the Century (posthumous)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section id="quotes" class="section quotes">
+    <div class="wrap">
+      <p class="eyebrow">In My Own Words</p>
+      <h2>A Few Favorite Quotes</h2>
+      <div class="quote-grid">
+        <blockquote>&ldquo;Imagination is more important than knowledge.&rdquo;</blockquote>
+        <blockquote>&ldquo;Life is like riding a bicycle. To keep your balance, you must keep moving.&rdquo;</blockquote>
+        <blockquote>&ldquo;The important thing is not to stop questioning.&rdquo;</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="section hobbies">
+    <div class="wrap">
+      <p class="eyebrow">Outside the Lab</p>
+      <h2>Hobbies</h2>
+      <ul class="hobby-list">
+        <li>
+          <span class="hobby-title">Playing the violin</span>
+          <p>I've played since childhood; Mozart's sonatas are my favorite way to think through a hard problem.</p>
+        </li>
+        <li>
+          <span class="hobby-title">Sailing</span>
+          <p>A slow, quiet way to spend an afternoon, even though I'm told I'm not very good at it.</p>
+        </li>
+        <li>
+          <span class="hobby-title">Long thinking walks</span>
+          <p>Many of my best ideas, including parts of relativity, came together on a walk rather than at a desk.</p>
+        </li>
+        <li>
+          <span class="hobby-title">Reading philosophy</span>
+          <p>Spinoza and Kant in particular; philosophy and physics ask a lot of the same questions.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section gallery">
+    <div class="wrap">
+      <p class="eyebrow">Snapshots</p>
+      <h2>Image Gallery</h2>
+      <p class="section-intro">A few photos from lectures, travels, and time with colleagues.</p>
+      <div class="gallery-grid">
+        <figure><img src="images/gallery-1.png" alt="Photo from a lecture in the 1920s"><figcaption>Lecture, 1920s</figcaption></figure>
+        <figure><img src="images/gallery-2.png" alt="Photo from a sailing trip"><figcaption>Sailing trip</figcaption></figure>
+        <figure><img src="images/gallery-3.png" alt="Photo with colleagues"><figcaption>With colleagues</figcaption></figure>
+        <figure><img src="images/gallery-4.png" alt="Photo at a chalkboard"><figcaption>At the chalkboard</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section blog">
+    <div class="wrap">
+      <p class="eyebrow">Writing</p>
+      <h2>Blog</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <span class="badge">draft</span>
+          <h3>Why I Still Think in Thought Experiments</h3>
+          <p>A short piece on how imagining simple situations, like riding alongside a beam of light, can reveal big ideas that equations alone tend to hide.</p>
+        </article>
+        <article class="blog-card">
+          <span class="badge">draft</span>
+          <h3>Notes on Scientific Curiosity</h3>
+          <p>Some thoughts on staying curious long after school is over, and why asking a question is often more valuable than answering one.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <p>&copy; <span id="year"></span> Albert Einstein</p>
+    <p class="footer-links"><a href="mailto:einstein@example.com">Email</a> &middot; Twitter/X &middot; LinkedIn</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
