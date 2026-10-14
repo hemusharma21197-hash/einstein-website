@@ -46,3 +46,82 @@ document.querySelectorAll(".paper-card").forEach(function (card) {
     }
   });
 });
+
+// ---------- Blog: publish a new post ----------
+// Posts are added to the page right away (kept in memory only, so they
+// reset when the page is refreshed — there is no server in this project).
+(function () {
+  var form = document.getElementById("blogForm");
+  if (!form) return;
+  var list = document.getElementById("blogPosts");
+  var error = document.getElementById("blogError");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var title = document.getElementById("postTitle").value.trim();
+    var body = document.getElementById("postBody").value.trim();
+    if (!title || !body) {
+      error.textContent = "Please add a title and write your article before publishing.";
+      error.hidden = false;
+      return;
+    }
+    error.hidden = true;
+
+    var card = document.createElement("article");
+    card.className = "blog-card";
+
+    var file = document.getElementById("postPhoto").files[0];
+    if (file && file.type.indexOf("image/") === 0) {
+      var img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      img.alt = "Photo for " + title;
+      card.appendChild(img);
+    }
+
+    var badge = document.createElement("span");
+    badge.className = "badge badge-new";
+    badge.textContent = "new";
+    var h3 = document.createElement("h3");
+    h3.textContent = title;
+    var date = document.createElement("p");
+    date.className = "post-date";
+    date.textContent = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    var p = document.createElement("p");
+    p.className = "post-body";
+    p.textContent = body;
+
+    card.appendChild(badge);
+    card.appendChild(h3);
+    card.appendChild(date);
+    card.appendChild(p);
+    list.insertBefore(card, list.firstChild);
+    form.reset();
+  });
+})();
+
+// ---------- Contact form ----------
+(function () {
+  var form = document.getElementById("contactForm");
+  if (!form) return;
+  var error = document.getElementById("contactError");
+  var ok = document.getElementById("contactOk");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    ok.hidden = true;
+    var name = document.getElementById("cName").value.trim();
+    var email = document.getElementById("cEmail").value.trim();
+    var message = document.getElementById("cMsg").value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !emailOk || !message) {
+      error.textContent = "Please enter your name, a valid email address and a message.";
+      error.hidden = false;
+      return;
+    }
+    error.hidden = true;
+    ok.textContent = "Thanks, " + name + "! Your message has been sent.";
+    ok.hidden = false;
+    form.reset();
+  });
+})();
